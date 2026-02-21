@@ -4,8 +4,8 @@
 
 /* Variables / Design System */
 :root {
-	--ltf-primary: #4F46E5;
-	--ltf-primary-hover: #4338CA;
+	--ltf-primary: #00A19A;
+	--ltf-primary-hover: #009CAB;
 	--ltf-secondary: #F3F4F6;
 	--ltf-secondary-hover: #E5E7EB;
 	--ltf-success: #10B981;
@@ -283,23 +283,31 @@
 
 /* Animations */
 @keyframes ltf-fade-in {
-	from { opacity: 0; }
-	to { opacity: 1; }
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
 }
 
 @keyframes ltf-slide-in {
-	from { 
+	from {
 		opacity: 0;
 		transform: translateX(10px);
 	}
-	to { 
+
+	to {
 		opacity: 1;
 		transform: translateX(0);
 	}
 }
 
 @keyframes ltf-spin {
-	to { transform: rotate(360deg); }
+	to {
+		transform: rotate(360deg);
+	}
 }
 
 /* Responsive */
@@ -308,16 +316,16 @@
 		padding: 1.5rem;
 		margin: 1rem;
 	}
-	
+
 	.ltf-option-label {
 		padding: 0.75rem;
 	}
-	
+
 	.ltf-nav-buttons {
 		flex-direction: column-reverse;
 		gap: 1rem;
 	}
-	
+
 	.ltf-nav-buttons .ltf-btn {
 		width: 100%;
 	}
