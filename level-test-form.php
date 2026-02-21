@@ -36,3 +36,24 @@ require_once LTF_PLUGIN_DIR . 'includes/class-ltf-shortcode.php';
 
 // 4. Panel administrativo y reportes
 require_once LTF_PLUGIN_DIR . 'admin/class-ltf-admin.php';
+
+/**
+ * Función que se ejecuta en la activación del plugin
+ */
+function activate_level_test_form()
+{
+    LTF_Activator::activate();
+}
+register_activation_hook(__FILE__, 'activate_level_test_form');
+
+/**
+ * Función principal para iniciar los componentes del plugin
+ */
+function run_level_test_form()
+{
+    $plugin_admin = new LTF_Admin();
+    $plugin_shortcode = new LTF_Shortcode();
+}
+
+// Iniciar el plugin
+run_level_test_form();

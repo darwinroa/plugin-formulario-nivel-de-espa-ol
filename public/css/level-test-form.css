@@ -1,0 +1,324 @@
+/* ==========================================================================
+   Level Test Form - Premium Styles
+   ========================================================================== */
+
+/* Variables / Design System */
+:root {
+	--ltf-primary: #4F46E5;
+	--ltf-primary-hover: #4338CA;
+	--ltf-secondary: #F3F4F6;
+	--ltf-secondary-hover: #E5E7EB;
+	--ltf-success: #10B981;
+	--ltf-success-hover: #059669;
+	--ltf-text-dark: #1F2937;
+	--ltf-text-light: #6B7280;
+	--ltf-bg: #ffffff;
+	--ltf-border: #D1D5DB;
+	--ltf-radius: 12px;
+	--ltf-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+	--ltf-font: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Wrapper */
+.ltf-quiz-wrapper {
+	max-width: 600px;
+	margin: 2rem auto;
+	background: var(--ltf-bg);
+	border-radius: var(--ltf-radius);
+	box-shadow: var(--ltf-shadow);
+	padding: 2.5rem;
+	font-family: var(--ltf-font);
+	color: var(--ltf-text-dark);
+	position: relative;
+	overflow: hidden;
+}
+
+/* Typography */
+.ltf-quiz-wrapper h2 {
+	font-size: 1.75rem;
+	font-weight: 700;
+	margin-bottom: 1rem;
+	color: var(--ltf-text-dark);
+	line-height: 1.2;
+}
+
+.ltf-quiz-wrapper h3 {
+	font-size: 1.25rem;
+	font-weight: 600;
+	margin-bottom: 1.5rem;
+	color: var(--ltf-text-dark);
+}
+
+.ltf-quiz-wrapper p {
+	color: var(--ltf-text-light);
+	font-size: 1rem;
+	line-height: 1.5;
+	margin-bottom: 1.5rem;
+}
+
+/* Screens */
+.ltf-screen {
+	animation: ltf-fade-in 0.4s ease-out forwards;
+}
+
+/* Buttons */
+.ltf-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.75rem 1.5rem;
+	font-size: 1rem;
+	font-weight: 600;
+	border-radius: 8px;
+	border: none;
+	cursor: pointer;
+	transition: all 0.2s ease;
+	text-decoration: none;
+}
+
+.ltf-btn:disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
+.ltf-btn-primary {
+	background-color: var(--ltf-primary);
+	color: white;
+}
+
+.ltf-btn-primary:not(:disabled):hover {
+	background-color: var(--ltf-primary-hover);
+	transform: translateY(-1px);
+	box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.2);
+}
+
+.ltf-btn-secondary {
+	background-color: var(--ltf-secondary);
+	color: var(--ltf-text-dark);
+}
+
+.ltf-btn-secondary:not(:disabled):hover {
+	background-color: var(--ltf-secondary-hover);
+}
+
+.ltf-btn-success {
+	background-color: var(--ltf-success);
+	color: white;
+}
+
+.ltf-btn-success:not(:disabled):hover {
+	background-color: var(--ltf-success-hover);
+	transform: translateY(-1px);
+	box-shadow: 0 4px 6px -1px rgba(16, 185, 129, 0.2);
+}
+
+/* Progress Bar */
+.ltf-progress-container {
+	margin-bottom: 2rem;
+}
+
+.ltf-progress-bar {
+	height: 8px;
+	background-color: var(--ltf-secondary);
+	border-radius: 4px;
+	overflow: hidden;
+	margin-bottom: 0.5rem;
+}
+
+#ltf-progress-bar {
+	height: 100%;
+	background: linear-gradient(90deg, var(--ltf-primary), #818CF8);
+	transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ltf-progress-text {
+	font-size: 0.875rem !important;
+	text-align: right;
+	margin: 0 !important;
+	font-weight: 500;
+}
+
+/* Questions */
+.ltf-question-block {
+	animation: ltf-slide-in 0.3s ease-out forwards;
+}
+
+.ltf-options {
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+	margin-bottom: 2rem;
+}
+
+.ltf-option-label {
+	display: flex;
+	align-items: center;
+	padding: 1rem;
+	border: 2px solid var(--ltf-border);
+	border-radius: 8px;
+	cursor: pointer;
+	transition: all 0.2s ease;
+	position: relative;
+	background: white;
+}
+
+.ltf-option-label:hover {
+	border-color: var(--ltf-primary);
+	background-color: #EEF2FF;
+}
+
+.ltf-option-label input[type="radio"] {
+	margin-right: 1rem;
+	width: 1.25rem;
+	height: 1.25rem;
+	accent-color: var(--ltf-primary);
+	cursor: pointer;
+}
+
+.ltf-option-text {
+	font-size: 1rem;
+	font-weight: 500;
+	color: var(--ltf-text-dark);
+}
+
+/* Active state for labels */
+.ltf-option-label.ltf-selected {
+	border-color: var(--ltf-primary);
+	background-color: #EEF2FF;
+	box-shadow: 0 0 0 1px var(--ltf-primary);
+}
+
+/* Navigation Buttons */
+.ltf-nav-buttons {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 2rem;
+	padding-top: 1.5rem;
+	border-top: 1px solid var(--ltf-secondary);
+}
+
+/* Inputs */
+.ltf-input {
+	width: 100%;
+	padding: 0.75rem 1rem;
+	font-size: 1rem;
+	border: 2px solid var(--ltf-border);
+	border-radius: 8px;
+	outline: none;
+	transition: border-color 0.2s ease;
+	margin-bottom: 1rem;
+	box-sizing: border-box;
+}
+
+.ltf-input:focus {
+	border-color: var(--ltf-primary);
+	box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+.ltf-error {
+	color: #DC2626 !important;
+	font-size: 0.875rem !important;
+	margin-top: 0.5rem !important;
+}
+
+/* Results */
+.ltf-result-header {
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+.ltf-result-header h2 {
+	color: var(--ltf-primary);
+	font-size: 2rem;
+}
+
+.ltf-result-message-box {
+	background-color: #EEF2FF;
+	padding: 1.5rem;
+	border-radius: 8px;
+	margin-bottom: 1.5rem;
+	border-left: 4px solid var(--ltf-primary);
+}
+
+.ltf-result-hook-box {
+	background-color: #ECFDF5;
+	padding: 1.5rem;
+	border-radius: 8px;
+	margin-bottom: 2rem;
+	border-left: 4px solid var(--ltf-success);
+}
+
+.ltf-result-hook-box p {
+	color: #065F46 !important;
+	font-weight: 500;
+	margin: 0 !important;
+}
+
+/* Loader */
+#ltf-loader {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(255, 255, 255, 0.9);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	z-index: 10;
+	border-radius: var(--ltf-radius);
+}
+
+.ltf-spinner {
+	width: 40px;
+	height: 40px;
+	border: 4px solid var(--ltf-secondary);
+	border-top-color: var(--ltf-primary);
+	border-radius: 50%;
+	animation: ltf-spin 1s linear infinite;
+	margin-bottom: 1rem;
+}
+
+/* Animations */
+@keyframes ltf-fade-in {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+@keyframes ltf-slide-in {
+	from { 
+		opacity: 0;
+		transform: translateX(10px);
+	}
+	to { 
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes ltf-spin {
+	to { transform: rotate(360deg); }
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+	.ltf-quiz-wrapper {
+		padding: 1.5rem;
+		margin: 1rem;
+	}
+	
+	.ltf-option-label {
+		padding: 0.75rem;
+	}
+	
+	.ltf-nav-buttons {
+		flex-direction: column-reverse;
+		gap: 1rem;
+	}
+	
+	.ltf-nav-buttons .ltf-btn {
+		width: 100%;
+	}
+}
