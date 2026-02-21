@@ -55,5 +55,18 @@ function run_level_test_form()
     $plugin_shortcode = new LTF_Shortcode();
 }
 
+/**
+ * Asegurar que la tabla existe (Failsafe)
+ */
+function ltf_check_db_table()
+{
+    global $wpdb;
+    $table_name = $wpdb->prefix . 'ltf_submissions';
+    if ($wpdb->get_var("SHOW TABLES LIKE '$table_name'") != $table_name) {
+        LTF_Activator::activate();
+    }
+}
+add_action('plugins_loaded', 'ltf_check_db_table');
+
 // Iniciar el plugin
 run_level_test_form();

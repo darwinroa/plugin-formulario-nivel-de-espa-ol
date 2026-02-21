@@ -31,7 +31,7 @@ class LTF_Activator
 			score smallint(5) NOT NULL,
 			total smallint(5) NOT NULL,
 			level varchar(10) NOT NULL,
-			created_at datetime DEFAULT CURRENT_TIMESTAMP NOT NULL,
+			created_at datetime NOT NULL,
 			PRIMARY KEY  (id)
 		) $charset_collate;";
 

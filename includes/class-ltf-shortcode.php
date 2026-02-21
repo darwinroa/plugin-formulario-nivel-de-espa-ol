@@ -83,7 +83,7 @@ class LTF_Shortcode
         );
 
         if (false === $inserted) {
-            wp_send_json_error(['message' => 'Error al guardar los datos en la base de datos.']);
+            wp_send_json_error(['message' => 'Error al guardar los datos en la base de datos. Detalle: ' . $wpdb->last_error]);
         }
 
         // 3. Devolver resultados de vuelta al formulario
