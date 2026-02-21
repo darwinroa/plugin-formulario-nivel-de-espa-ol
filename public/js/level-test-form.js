@@ -125,6 +125,12 @@
                         $('#ltf-res-message').text(response.data.message);
                         $('#ltf-res-hook').text(response.data.hook);
 
+                        if (response.data.course_url && response.data.course_url.trim() !== '') {
+                            $('#ltf-res-course-btn').attr('href', response.data.course_url).show();
+                        } else {
+                            $('#ltf-res-course-btn').hide();
+                        }
+
                         // Show Results Screen
                         $emailScreen.hide();
                         $resultScreen.show();

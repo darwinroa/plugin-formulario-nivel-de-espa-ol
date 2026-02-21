@@ -94,6 +94,7 @@ class LTF_Quiz_Engine
             'level' => $level_data['level'],
             'message' => $level_data['message'],
             'hook' => $level_data['hook'],
+            'course_url' => $level_data['course_url'],
             'details' => $details
         ];
     }
@@ -111,7 +112,8 @@ class LTF_Quiz_Engine
                 'level' => 'A1',
                 'title' => 'Nivel A1 (Principiante)',
                 'message' => '¡Buen comienzo! Estás dando tus primeros pasos en el español. Eres capaz de entender expresiones cotidianas y presentarte.',
-                'hook' => 'Para que tu llegada a Colombia sea perfecta, te recomendamos nuestro Curso de Principiantes y un alojamiento con anfitrión local en Bogotá para que practiques desde el primer día.'
+                'hook' => 'Para que tu llegada a Colombia sea perfecta, te recomendamos nuestro Curso de Principiantes y un alojamiento con anfitrión local en Bogotá para que practiques desde el primer día.',
+                'course_url' => get_option('ltf_course_link_a1', '')
             ];
         }
         elseif ($score <= 12) {
@@ -119,7 +121,8 @@ class LTF_Quiz_Engine
                 'level' => 'A2',
                 'title' => 'Nivel A2 (Elemental)',
                 'message' => '¡Vas por buen camino! Puedes comunicarte en tareas sencillas y hablar de tu pasado de forma básica.',
-                'hook' => 'Es hora de soltar la lengua. Nuestro Curso principiante, para que repases todo el nivel A1 y hagas del A2 en adelante te dará la confianza para moverte por las calles de Medellín. ¡Mira estos apartamentos para estudiantes que tenemos para ti!'
+                'hook' => 'Es hora de soltar la lengua. Nuestro Curso principiante, para que repases todo el nivel A1 y hagas del A2 en adelante te dará la confianza para moverte por las calles de Medellín. ¡Mira estos apartamentos para estudiantes que tenemos para ti!',
+                'course_url' => get_option('ltf_course_link_a2', '')
             ];
         }
         elseif ($score <= 18) {
@@ -127,7 +130,8 @@ class LTF_Quiz_Engine
                 'level' => 'B1',
                 'title' => 'Nivel B1 (Intermedio)',
                 'message' => '¡Felicidades! Tienes un nivel intermedio. Puedes describir experiencias, deseos y viajar por Colombia con autonomía.',
-                'hook' => 'Para alcanzar la fluidez total, necesitas nuestro Curso Intermedio. Te sugerimos una inmersión en el Eje Cafetero, hospedándote en una de nuestras fincas asociadas.'
+                'hook' => 'Para alcanzar la fluidez total, necesitas nuestro Curso Intermedio. Te sugerimos una inmersión en el Eje Cafetero, hospedándote en una de nuestras fincas asociadas.',
+                'course_url' => get_option('ltf_course_link_b1', '')
             ];
         }
         elseif ($score <= 24) {
@@ -135,7 +139,8 @@ class LTF_Quiz_Engine
                 'level' => 'B2',
                 'title' => 'Nivel B2 (Intermedio Alto)',
                 'message' => '¡Excelente! Entiendes ideas complejas y puedes relacionarte con hablantes nativos con suficiente fluidez.',
-                'hook' => 'Estás a un paso de la perfección. Te recomendamos nuestro Curso intermedio y un paquete turístico de aventura en Santander para poner a prueba tu español.'
+                'hook' => 'Estás a un paso de la perfección. Te recomendamos nuestro Curso intermedio y un paquete turístico de aventura en Santander para poner a prueba tu español.',
+                'course_url' => get_option('ltf_course_link_b2', '')
             ];
         }
         else {
@@ -143,7 +148,8 @@ class LTF_Quiz_Engine
                 'level' => 'C1',
                 'title' => 'Nivel C1 (Avanzado)',
                 'message' => '¡Eres casi un nativo! Comprendes textos extensos y usas el idioma de forma flexible y efectiva.',
-                'hook' => 'No dejes que tu español se oxide. Únete a nuestro curso nivel C1 y vive una experiencia de lujo en Cartagena mientras actúas como embajador de nuestra lengua.'
+                'hook' => 'No dejes que tu español se oxide. Únete a nuestro curso nivel C1 y vive una experiencia de lujo en Cartagena mientras actúas como embajador de nuestra lengua.',
+                'course_url' => get_option('ltf_course_link_c1', '')
             ];
         }
     }

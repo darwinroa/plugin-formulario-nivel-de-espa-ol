@@ -37,8 +37,8 @@ $questions = LTF_Quiz_Engine::get_questions();
 
         <form id="ltf-quiz-form">
             <?php foreach ($questions as $index => $q): ?>
-            <div class="ltf-question-block" id="ltf-q-<?php echo esc_attr($index); ?>" <?php echo $index> 0 ?
-                'style="display: none;"' : ''; ?>>
+            <div class="ltf-question-block" id="ltf-q-<?php echo esc_attr($index); ?>" <?php echo $index > 0 ? 
+        'style="display: none;"' : ''; ?>>
                 <h3 class="ltf-question-text">
                     <?php echo esc_html(($index + 1) . '. ' . $q['text']); ?>
                 </h3>
@@ -106,7 +106,9 @@ endforeach; ?>
         <div class="ltf-result-hook-box">
             <p id="ltf-res-hook"></p>
         </div>
-        <div class="ltf-result-actions">
+        <div class="ltf-result-actions" style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+            <a href="#" id="ltf-res-course-btn" class="ltf-btn ltf-btn-primary"
+                style="display: none; text-decoration: none;">Ver Curso Recomendado</a>
             <button type="button" class="ltf-btn ltf-btn-secondary" onclick="location.reload();">Volver a
                 intentar</button>
         </div>
