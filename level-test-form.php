@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:       Level Test Form
- * Plugin URI:        https://tusitio.com/level-test-form
+ * Plugin URI:        https://github.com/darwinroa/plugin-formulario-nivel-de-espa-ol
  * Description:       Plugin para crear un test de nivel de español, procesa respuestas y calcula el nivel.
  * Version:           1.0.0
  * Author:            Darwin Roa
