@@ -16,7 +16,8 @@
 	--ltf-border: #D1D5DB;
 	--ltf-radius: 12px;
 	--ltf-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-	--ltf-font: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+	--ltf-font-headings: 'Comfortaa', cursive, sans-serif;
+	--ltf-font-body: 'PT Serif Caption', serif;
 }
 
 /* Wrapper */
@@ -27,13 +28,22 @@
 	border-radius: var(--ltf-radius);
 	box-shadow: var(--ltf-shadow);
 	padding: 2.5rem;
-	font-family: var(--ltf-font);
+	font-family: var(--ltf-font-body);
 	color: var(--ltf-text-dark);
 	position: relative;
 	overflow: hidden;
 }
 
 /* Typography */
+.ltf-quiz-wrapper h1,
+.ltf-quiz-wrapper h2,
+.ltf-quiz-wrapper h3,
+.ltf-quiz-wrapper h4,
+.ltf-quiz-wrapper h5,
+.ltf-quiz-wrapper h6 {
+	font-family: var(--ltf-font-headings);
+}
+
 .ltf-quiz-wrapper h2 {
 	font-size: 1.75rem;
 	font-weight: 700;

@@ -25,6 +25,7 @@ class LTF_Shortcode
      */
     public function enqueue_scripts()
     {
+        wp_enqueue_style('ltf-google-fonts', 'https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&family=PT+Serif+Caption&display=swap', [], null);
         wp_enqueue_style('ltf-public-style', LTF_PLUGIN_URL . 'public/css/level-test-form.css', [], LTF_VERSION, 'all');
 
         wp_enqueue_script('ltf-public-script', LTF_PLUGIN_URL . 'public/js/level-test-form.js', ['jquery'], LTF_VERSION, true);
