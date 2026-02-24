@@ -21,7 +21,7 @@ $questions = LTF_Quiz_Engine::get_questions();
         <h2>Descubre tu Nivel de Español</h2>
         <p>Demuestra lo que sabes con 30 preguntas que van desde Principiante hasta Avanzado. Al finalizar, recibirás tu
             nivel estimado y recomendaciones personalizadas.</p>
-        <button type="button" id="ltf-start-btn" class="ltf-btn ltf-btn-primary">¡Comenzar el Test!</button>
+        <button type="button" id="ltf-start-btn" class="ltf-btn ltf-btn-primary">¡Comenzar el test!</button>
     </div>
 
     <!-- 2. Formulario de Preguntas -->
@@ -108,7 +108,7 @@ endforeach; ?>
         </div>
         <div class="ltf-result-actions" style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
             <a href="#" id="ltf-res-course-btn" class="ltf-btn ltf-btn-primary"
-                style="display: none; text-decoration: none;">Ver Curso Recomendado</a>
+                style="display: none; text-decoration: none;">Ver curso recomendado</a>
             <button type="button" class="ltf-btn ltf-btn-secondary" onclick="location.reload();">Volver a
                 intentar</button>
         </div>
