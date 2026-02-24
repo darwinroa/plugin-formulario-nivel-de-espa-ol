@@ -93,7 +93,7 @@
 
 .ltf-btn-primary {
 	background-color: var(--ltf-primary);
-	color: white;
+	color: white !important;
 }
 
 .ltf-btn-primary:not(:disabled):hover {
