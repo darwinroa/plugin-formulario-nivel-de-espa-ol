@@ -16,7 +16,7 @@ class LTF_Quiz_Engine
     {
         return [
             // Bloque A1: Principiante
-            ['id' => 1, 'block' => 'A1', 'text' => '¿Cómo ________ te llamas? — Me llamo Juan.', 'options' => ['tú', 'te', 'usted'], 'answer' => 1], // B
+            ['id' => 1, 'block' => 'A1', 'text' => '¿Cómo ________ llamas? — Me llamo Juan.', 'options' => ['tú', 'te', 'usted'], 'answer' => 1], // B
             ['id' => 2, 'block' => 'A1', 'text' => 'Nosotros ________ en Medellín desde hace dos días.', 'options' => ['somos', 'estamos', 'tenemos'], 'answer' => 1], // B
             ['id' => 3, 'block' => 'A1', 'text' => 'Mis padres ________ en una casa muy bonita cerca del parque.', 'options' => ['viven', 'vivís', 'vive'], 'answer' => 0], // A
             ['id' => 4, 'block' => 'A1', 'text' => '¿A qué hora ________ el curso de español?', 'options' => ['empieza', 'empiezas', 'empezas'], 'answer' => 0], // A
@@ -51,7 +51,7 @@ class LTF_Quiz_Engine
             ['id' => 25, 'block' => 'C1', 'text' => 'Dudo mucho que para el próximo año ya ________ una solución.', 'options' => ['hayan encontrado', 'han encontrado', 'hubieran encontrado'], 'answer' => 0], // A
             ['id' => 26, 'block' => 'C1', 'text' => 'Por mucho que ________, no consigue aprender las preposiciones.', 'options' => ['estudia', 'estudie', 'estudiará'], 'answer' => 1], // B
             ['id' => 27, 'block' => 'C1', 'text' => 'Le dije que lo hiciera ________ antes posible.', 'options' => ['lo', 'cuanto', 'tan'], 'answer' => 0], // A
-            ['id' => 28, 'block' => 'C1', 'text' => '¡Quién ________ hablar español como un nativo!', 'options' => ['supiera', 'sabe', 'sabría'], 'answer' => 0], // A
+            ['id' => 28, 'block' => 'C1', 'text' => '¿Quién ________ hablar español como un nativo?', 'options' => ['supiera', 'sabe', 'sabría'], 'answer' => 0], // A
             ['id' => 29, 'block' => 'C1', 'text' => 'Se comportó como si no ________ nada de lo que pasó.', 'options' => ['supiera', 'sepa', 'sabe'], 'answer' => 0], // A
             ['id' => 30, 'block' => 'C1', 'text' => 'No es que no ________ ir, es que no tengo tiempo.', 'options' => ['quiero', 'quiera', 'querría'], 'answer' => 1], // B
         ];
